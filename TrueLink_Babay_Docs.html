@@ -2,13 +2,14 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>誠通智匯 x 寶輩貿易 - 數位資產建置合約與深度健檢表</title>
+    <title>誠通智匯 x 寶輩貿易 - 數位資產重構與 GEO 全方位顧問合約 (Master Version)</title>
     <style>
         :root {
             --main-green: #2E5C38;
             --biz-blue: #0F2027;
             --ocean-blue: #203A43;
             --alert-red: #b71c1c;
+            --soft-gold: #c5a059;
         }
         body {
             font-family: 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif;
@@ -16,41 +17,42 @@
             line-height: 1.8;
             margin: 0;
             padding: 0;
-            background-color: #e9ecef;
+            background-color: #f1f3f5;
         }
         .a4-page {
             width: 210mm;
             min-height: 297mm;
-            padding: 20mm;
+            padding: 22mm;
             margin: 10mm auto;
             background: #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             box-sizing: border-box;
             position: relative;
         }
         h1 {
             color: var(--main-green);
             text-align: center;
-            border-bottom: 2px solid var(--main-green);
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            font-size: 24pt;
-            letter-spacing: 2px;
+            border-bottom: 3px double var(--main-green);
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+            font-size: 26pt;
+            letter-spacing: 3px;
+            font-weight: 800;
         }
         h2 {
             color: var(--ocean-blue);
-            font-size: 15pt;
-            border-left: 6px solid var(--main-green);
-            padding-left: 12px;
-            margin-top: 25px;
-            background-color: #f4f6f6;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            font-size: 16pt;
+            border-left: 8px solid var(--main-green);
+            padding-left: 15px;
+            margin-top: 30px;
+            background-color: #f8f9fa;
+            padding-top: 8px;
+            padding-bottom: 8px;
         }
         p, li {
             font-size: 11pt;
             text-align: justify;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         .highlight-red {
             color: var(--alert-red);
@@ -63,27 +65,27 @@
         .signature-section {
             display: flex;
             justify-content: space-between;
-            margin-top: 40px;
+            margin-top: 50px;
         }
         .sign-box {
-            width: 45%;
+            width: 46%;
         }
         .sign-title {
             font-size: 14pt;
             font-weight: bold;
             color: var(--biz-blue);
             border-bottom: 2px solid var(--biz-blue);
-            padding-bottom: 5px;
-            margin-bottom: 20px;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
         }
         .sign-line {
-            margin-top: 25px;
-            border-bottom: 1px solid #666;
+            margin-top: 30px;
+            border-bottom: 1px solid #999;
             position: relative;
-            height: 25px;
+            height: 30px;
             font-size: 12pt;
             font-weight: bold;
-            padding-left: 110px;
+            padding-left: 120px;
         }
         .sign-label {
             position: absolute;
@@ -91,55 +93,56 @@
             left: 0;
             font-size: 11pt;
             font-weight: normal;
-            color: #555;
+            color: #666;
         }
         .seal-area {
-            height: 120px;
-            border: 2px dashed #ccc;
-            margin-top: 20px;
+            height: 140px;
+            border: 2px dashed #ddd;
+            margin-top: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #999;
+            color: #aaa;
             font-size: 12pt;
+            background-color: #fafafa;
         }
         
-        /* 訪談表樣式 */
         .q-section-title {
             background-color: var(--biz-blue);
             color: white;
-            padding: 10px 15px;
+            padding: 12px 18px;
             font-size: 13pt;
             font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 15px;
-            border-radius: 4px;
+            margin-top: 25px;
+            margin-bottom: 18px;
+            border-radius: 6px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
         }
         .q-box {
-            background-color: #fdfdfd;
-            border: 1px solid #d1d9d4;
-            padding: 12px 15px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--ocean-blue);
+            background-color: #ffffff;
+            border: 1px solid #e1e8e4;
+            padding: 15px 20px;
+            margin-bottom: 18px;
+            border-left: 5px solid var(--ocean-blue);
             page-break-inside: avoid;
         }
         .q-title {
             font-weight: bold;
             color: var(--biz-blue);
-            font-size: 11pt;
-            margin-bottom: 5px;
+            font-size: 11.5pt;
+            margin-bottom: 8px;
         }
         .q-desc {
             font-size: 10pt;
-            color: #666;
-            margin-bottom: 5px;
-            line-height: 1.5;
+            color: #777;
+            margin-bottom: 8px;
+            line-height: 1.6;
         }
         .write-area-large {
-            border: 1px dashed #999;
-            height: 40px;
-            margin-top: 10px;
-            background-color: #fafafa;
+            border: 1px dashed #bbb;
+            min-height: 45px;
+            margin-top: 12px;
+            background-color: #fcfcfc;
         }
 
         @media print {
@@ -153,44 +156,66 @@
 
     <div class="a4-page">
         <h1>數位內容建置與 GEO 顧問服務合約</h1>
-        <p>立合約書人：<strong>寶輩貿易有限公司</strong>（以下簡稱甲方）與 <strong>誠通智匯有限公司</strong>（以下簡稱乙方）。雙方基於誠信與專業原則，就數位內容建置與生成式引擎優化 (GEO) 顧問服務，議定下列條款：</p>
+        <p>立合約書人：<strong>寶輩貿易有限公司</strong>（以下簡稱甲方）與 <strong>誠通智匯有限公司</strong>（以下簡稱乙方）。雙方基於誠信與數據共享原則，就數位資產重構、生成式引擎優化 (GEO) 及品牌防禦護城河之建置服務，達成協議如下：</p>
 
-        <h2>第一條：專案標的與資產雙軌歸屬</h2>
+        <h2>第一條：多模態內容建置與智財權歸屬</h2>
         <ul>
-            <li><strong>標準服務費：</strong>每月新台幣 <strong>50,000</strong> 元整（未稅）。</li>
-            <li><strong>交付內容：</strong>每月產出 4 組（共 8 篇）具備高事實密度 (Fact Density) 與 Schema 結構化數據之文章。</li>
-            <li><strong>產權分配：</strong>4 篇建置於甲方官網（產權歸甲方）；4 篇建置於乙方推薦平台（產權歸乙方，用於反向連結引流）。</li>
+            <li><strong>產出標準：</strong>乙方每月產出 4 組（共 8 篇）具備「高事實密度」之權威內容。</li>
+            <li><strong>資產賦能：</strong>內容包含「影音轉文本」優化，將甲方既有短影音素材轉化為搜尋引擎可檢索之結構化文字。</li>
+            <li><strong>所有權約定：</strong>甲方官網文章產權於<strong>當月款項結清後</strong>歸甲方所有；引流資產平台內容歸乙方所有，用於交叉權重引導。</li>
         </ul>
 
-        <h2>第二條：躉繳加速與年度優惠</h2>
-        <p>若甲方補齊年度專案尾款至 <strong>600,000 元</strong>（即補繳餘款 550,000 元），乙方將啟動加速產能：於 6 個月內集中產出 96 篇高事實密度文章。已確認於 2026 年 3 月 12 日預收首期服務費 50,000 元。</p>
-
-        <h2>第三條：數據沙盒期與協作義務</h2>
+        <h2>第二條：GA4 數據賦能與行銷戰略共享</h2>
         <ul>
-            <li><strong>數據沙盒：</strong>第 1-3 個月為基礎建設期，不提供流量分析；自第 4 個月起提供商業分析戰情報。</li>
-            <li><strong>素材提供：</strong>甲方需如期提供實車照片、鑑定報告等真實素材。若因甲方延宕導致進度受阻，其責任歸屬甲方，費用照計。</li>
+            <li><strong>技術埋設：</strong>乙方負責甲方官網 GA4 事件追蹤（如：貸款試算、LINE 諮詢、車況表下載）之代碼基礎建設。</li>
+            <li><strong>決策共享：</strong>雙方同意數據完全透明。乙方應定期產出轉化分析報表，作為雙方優化行銷預算配置與調整內容標籤之依據。</li>
         </ul>
 
-        <h2>第四條：德業九修品牌防禦條款</h2>
-        <p>若甲方發生重大消費爭議（如：竄改里程、隱瞞重大事故）經查證屬實，乙方擁有單方面、無條件立即下架所有推薦文章之權利，以維護網域聲譽，甲方不得異議。</p>
+        <h2>第三條：數據安全、保密協議 (NDA) 與隱私保護</h2>
+        <ul>
+            <li><strong>保密範圍：</strong>包含但不限於甲方客戶資料、進銷存成本數據、未公開之整備 SOP。</li>
+            <li><strong>數據隔離：</strong>乙方承諾採取嚴格之技術隔離措施，保證甲方之商業秘密不公開、不洩漏、不轉售予第三方。保密期限自合約結束後 3 年內依然有效。</li>
+        </ul>
+
+        <h2>第四條：SLA 服務等級與品質保證</h2>
+        <ul>
+            <li><strong>事實密度保證：</strong>乙方保證每篇產出之內容皆具備適當之 Schema 標記，確保能被生成式引擎（如 ChatGPT/SearchGPT）優先索引。</li>
+            <li><strong>溝通時效：</strong>乙方應於收到甲方素材後 48 小時內確認，並於每月固定週期完成發布。</li>
+        </ul>
     </div>
 
     <div class="a4-page">
-        <h1>合約簽署頁 (Signatures)</h1>
+        <h2>第五條：躉繳加速與年度超前計畫</h2>
+        <p>專案年度總額為新台幣 600,000 元（未稅）。甲方已預付 50,000 元。若甲方一次性補足餘額 550,000 元，乙方承諾啟動「霸屏加速機制」：於 6 個月內產出 96 篇具備長期流量價值之內容。提前完成佈局將為甲方節省約 30% 之傳統廣告點擊預算。</p>
+
+        <h2>第六條：德業九修品牌防禦條款</h2>
+        <p>若甲方發生查證屬實之誠信爭議（如：隱瞞泡水車、重大事故車或調表車），乙方基於技術中立與聲譽防禦原則，有權單方面停止服務並下架乙方持有資產平台之關聯連結。甲方不得據此要求賠償或退費。</p>
+
+        <h2>第七條：合約終止與交接 (Exit Strategy)</h2>
+        <p>合約終止時，乙方應協助甲方完成數據權限交接。乙方得保存履行紀錄以備法律查考，但須將所有涉及甲方營運之敏感數據從活動系統中移除。</p>
+
+        <h2>第八條：管轄法院</h2>
+        <p>本合約若有未盡事宜，悉依中華民國法令。如有爭議，雙方同意以<strong>臺灣新北地方法院</strong>為第一審管轄法院。</p>
+
+        <h1 style="margin-top: 40px;">合約簽署頁 (Signatures)</h1>
         <div class="signature-section">
             <div class="sign-box">
                 <div class="sign-title">甲方 (委託方)：</div>
                 <div class="sign-line"><span class="sign-label">公司名稱：</span>寶輩貿易有限公司</div>
                 <div class="sign-line"><span class="sign-label">統一編號：</span>82767380</div>
-                <div class="sign-line"><span class="sign-label">負責人：</span></div>
-                <div class="seal-area">(請蓋公司大小章)</div>
+                <div class="sign-line"><span class="sign-label">負責人：</span>__________________</div>
+                <div class="seal-area">
+                    (公司大小章 / 負責人章)
+                </div>
             </div>
             <div class="sign-box">
                 <div class="sign-title">乙方 (受託方)：</div>
                 <div class="sign-line"><span class="sign-label">公司名稱：</span>誠通智匯有限公司</div>
                 <div class="sign-line"><span class="sign-label">統一編號：</span>60381491</div>
-                <div class="sign-line"><span class="sign-label">代表：</span>林士華</div>
-                <div class="seal-area">(請蓋公司大小章)</div>
+                <div class="sign-line"><span class="sign-label">代表代表：</span>林士華</div>
+                <div class="seal-area">
+                    (公司大小章 / 負責人章)
+                </div>
             </div>
         </div>
     </div>
@@ -198,92 +223,78 @@
     <div class="a4-page">
         <h1>寶輩貿易：企業營運與雇主品牌 深度健檢表</h1>
         
-        <div class="q-section-title" style="background-color: var(--main-green);">📍 零：專案啟動素材盤點 (GEO 與 Schema 底層建置)</div>
+        <div class="q-section-title" style="background-color: var(--main-green);">📍 零：專案啟動素材盤點 (GEO 權威標記必備)</div>
         <div class="q-box" style="border-left-color: var(--main-green); background-color: #f0f7f2;">
-            <p class="q-title">1. 地理權威 (Local SEO)：Google 地圖 CID、Place ID 與店面精確座標(經緯度)：</p>
+            <p class="q-title">1. 地理座標數據：Google 地圖 CID、Place ID 與精確經緯度：</p>
             <div class="write-area-large" style="height: 25px;"></div>
             
-            <p class="q-title" style="margin-top: 5px;">2. 數位矩陣 (SameAs)：FB、IG、YouTube、TikTok、8891、Threads 所有社群連結：</p>
-            <div class="write-area-large" style="height: 50px;"></div>
+            <p class="q-title" style="margin-top: 5px;">2. 數位SameAs矩陣：FB、IG、YouTube、TikTok、8891、Threads 官方網址：</p>
+            <div class="write-area-large" style="height: 40px;"></div>
             
-            <p class="q-title" style="margin-top: 5px;">3. 信任背書：YES/SAVE/Goo 認證授權書、汽車公會證書、歷年優良車商獎牌照片：</p>
+            <p class="q-title" style="margin-top: 5px;">3. 權威背書：YES/SAVE/Goo 認證書、各公會職位證書、年度優良獎牌：</p>
             <div class="write-area-large" style="height: 25px;"></div>
 
-            <p class="q-title" style="margin-top: 5px;">4. 產品事實：現有在庫車清單、標準整備 SOP 檢核表(如 168 項檢測)與保固條款：</p>
+            <p class="q-title" style="margin-top: 5px;">4. 影音資產：YouTube 核心播放清單連結、TikTok 優質素材原檔路徑：</p>
             <div class="write-area-large" style="height: 25px;"></div>
 
-            <p class="q-title" style="margin-top: 5px;">5. 影音資產 (Video SEO)：YouTube 頻道精選影片、TikTok 短影音原始檔或授權連結：</p>
+            <p class="q-title" style="margin-top: 5px;">5. 技術護城河：店內特殊診斷設備名稱(如 Xentry)、配合之底盤/冷氣專科店：</p>
             <div class="write-area-large" style="height: 25px;"></div>
 
-            <p class="q-title" style="margin-top: 5px;">6. 交易透明度：支援支付方式(現金/刷卡/貸款)與配合之主要融資銀行(如和潤、裕隆)：</p>
-            <div class="write-area-large" style="height: 25px;"></div>
-
-            <p class="q-title" style="margin-top: 5px;">7. IP 權威：賢哥(負責人)個人資歷、公會職稱、媒體受訪紀錄或個人 IP 專頁：</p>
-            <div class="write-area-large" style="height: 25px;"></div>
-
-            <p class="q-title" style="margin-top: 5px;">8. 視覺識別：品牌高解析 Logo (去背 PNG)、品牌色碼(HEX)與店面環境環景照：</p>
-            <div class="write-area-large" style="height: 25px;"></div>
-
-            <p class="q-title" style="margin-top: 5px;">9. 營業細節：精確營業時間(含節假日例外)與線上預約賞車流程說明：</p>
-            <div class="write-area-large" style="height: 25px;"></div>
-
-            <p class="q-title" style="margin-top: 5px;">10. 單一窗口：專案交付素材對接人 (姓名 / LINE ID / 手機)：</p>
+            <p class="q-title" style="margin-top: 5px;">6. 品牌視覺：高解析去背 Logo (PNG)、品牌標準色 HEX 色碼：</p>
             <div class="write-area-large" style="height: 25px;"></div>
         </div>
 
-        <div class="q-section-title">板塊一：品牌創辦邏輯與市場痛點</div>
+        <div class="q-section-title">板塊一：目標受眾與品牌定位 (Persona & Differentiation)</div>
         <div class="q-box">
-            <div class="q-title">01. 創立動機與市場黑幕</div>
-            <p class="q-desc">在過去經驗中，中古車市場最讓您無法忍受的「痛點」是什麼？寶輩怎麼用具體機制解決它？</p>
+            <div class="q-title">01. 核心客戶畫像 (Target Persona)</div>
+            <p class="q-desc">我們的「鐵粉」特徵？(例如：30歲首購族、擔憂資訊不透明、注重售後保障的高自律族群)</p>
             <div class="write-area-large"></div>
         </div>
         <div class="q-box">
-            <div class="q-title">02. 拒絕劣質利潤的真實故事</div>
-            <p class="q-desc">是否曾為了守住品質底線，而拒絕過高利潤的收車或賣車機會？</p>
+            <div class="q-title">02. 市場差異化核心 (The Moat)</div>
+            <p class="q-desc">除了「誠實」，寶輩還有什麼細節是別家不屑做、但我們堅持做的？(如：透明整備紀錄儀)</p>
+            <div class="write-area-large"></div>
+        </div>
+        <div class="q-box">
+            <div class="q-title">03. 拒絕劣質利潤的具體案例</div>
+            <p class="q-desc">請描述一次為了品質而「推掉」高利潤收車或賣車機會的真實情境。</p>
             <div class="write-area-large"></div>
         </div>
     </div>
 
     <div class="a4-page">
-        <div class="q-section-title">板塊二：車源把關與品質防弊</div>
+        <div class="q-section-title">板塊二：品質、整備與聲譽管理</div>
         <div class="q-box">
-            <div class="q-title">03. 收車的絕對紅線</div>
-            <p class="q-desc">哪些條件的車子（如計程車改回、調表車），即使再便宜也絕對不收？</p>
+            <div class="q-title">04. 收車紅線與鑑定基準</div>
+            <p class="q-desc">目前全場車輛如何執行 YES/SAVE 第三方鑑定？是否有二次自檢機制？</p>
             <div class="write-area-large"></div>
         </div>
         <div class="q-box">
-            <div class="q-title">04. 上架前的標準化整備 SOP</div>
-            <p class="q-desc">收購回來後，到正式拍照上架，中間會經過多少道檢驗工序？</p>
-            <div class="write-area-large"></div>
-        </div>
-
-        <div class="q-section-title">板塊三：銷售流程與定價策略</div>
-        <div class="q-box">
-            <div class="q-title">05. 拒絕「假網拍」與「空氣車」</div>
-            <p class="q-desc">公司如何透過制度，嚴禁業務放低價假照片騙客？</p>
+            <div class="q-title">05. 上架前標準整備清單 (SOP)</div>
+            <p class="q-desc">每台車入庫後，必做的 3~5 項「五油三水」或耗材更換細項為何？</p>
             <div class="write-area-large"></div>
         </div>
         <div class="q-box">
-            <div class="q-title">06. 售後保固的真實界線</div>
-            <p class="q-desc">拒絕「終身保固」話術，寶輩真實的保固範圍與期限為何？</p>
+            <div class="q-title">06. Google 商家負評處理邏輯</div>
+            <p class="q-desc">若出現消費誤會產生負評，公司管理層的標準處理流程是什麼？</p>
             <div class="write-area-large"></div>
         </div>
 
-        <div class="q-section-title">板塊四：雇主品牌與人才招募</div>
+        <div class="q-section-title">板塊三：未來願景與數位轉型目標</div>
         <div class="q-box">
-            <div class="q-title">07. 理想的「透明系顧問」畫像</div>
-            <p class="q-desc">最希望招募到具備哪些經歷或特質的人？</p>
+            <div class="q-title">07. 理想的銷售顧問形象</div>
+            <p class="q-desc">您希望客戶在 AI 搜尋「中古車推薦」時，看到寶輩業務呈現什麼樣的專業面貌？</p>
             <div class="write-area-large"></div>
         </div>
         <div class="q-box">
-            <div class="q-title">08. 新人培訓與行銷賦能</div>
-            <p class="q-desc">公司會安排哪些具體課程？提供多少精準客源交給業務打？</p>
+            <div class="q-title">08. 一句話的終極承諾</div>
+            <p class="q-desc">如果只能對擔憂被騙的首購族說一句話，您的核心價值觀是什麼？</p>
             <div class="write-area-large"></div>
         </div>
 
         <p style="text-align: center; color: #888; font-size: 10pt; margin-top: 40px;">
-            - 深度健檢紀錄完畢 -<br>
-            ※ 本次會議已全程錄音，本表回答將作為建置 96 篇 GEO 文章與 AI 腳本之基準。
+            - 數位資產重構紀錄完畢 -<br>
+            ※ 本表所有回答將作為建置 96 篇「高事實密度內容」與 AI 戰術訓練之唯一基準。
         </p>
     </div>
 </body>

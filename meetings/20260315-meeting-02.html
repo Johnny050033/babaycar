@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寶輩國際 x 誠通智匯｜專案啟動檢核清單與內容矩陣</title>
+    <style>
+        :root {
+            --main-green: #2E5C38;
+            --main-dark: #0F2027;
+            --bg-color: #f4f7f6;
+            --gold: #c5a059;
+            --text-gray: #4a5568;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 密碼解鎖畫面 */
+        #auth-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100vh;
+            background: linear-gradient(135deg, var(--main-dark), var(--main-green));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: white;
+        }
+        .auth-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .auth-box h2 { margin-top: 0; letter-spacing: 2px; }
+        .auth-box input {
+            padding: 12px;
+            width: 80%;
+            margin: 20px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .auth-box button {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .auth-box button:hover { background-color: #b08d4a; }
+
+        /* 主內容區 */
+        #main-content {
+            display: none; /* 預設隱藏，解鎖後顯示 */
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .header-title {
+            text-align: center;
+            color: var(--main-dark);
+            border-bottom: 3px solid var(--main-green);
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--main-green);
+        }
+        .card h2 {
+            color: var(--main-green);
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+        }
+        .card h3 { color: var(--main-dark); margin-top: 25px; }
+        ul { padding-left: 20px; color: var(--text-gray); }
+        li { margin-bottom: 8px; }
+        
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--gold);
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        /* 矩陣排版 */
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .matrix-card {
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .matrix-card h4 {
+            margin-top: 0;
+            color: #fff;
+            background-color: var(--main-dark);
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #2d3748;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 4px 2px;
+        }
+
+        /* Demo 連結按鈕 */
+        .demo-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .demo-btn {
+            display: inline-block;
+            background-color: var(--main-dark);
+            color: white;
+            text-decoration: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+        .demo-btn:hover {
+            background-color: var(--main-green);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="auth-screen">
+        <div class="auth-box">
+            <h2>🔒 誠通智匯 機密商業文件</h2>
+            <p>請輸入查閱密碼以解鎖寶輩國際專案內容</p>
+            <input type="password" id="pwd-input" placeholder="請輸入密碼">
+            <br>
+            <button onclick="checkPwd()">解鎖文件</button>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <h1 class="header-title">寶輩國際 x 誠通智匯<br><span style="font-size: 1.2rem; color: #666;">專案啟動檢核清單與大數據矩陣佈局</span></h1>
+
+        <div class="card">
+            <h2>🎬 行動一：寶輩國際品牌影片架構建議（社群首頁用）</h2>
+            <p><strong>影片定位：</strong>「寶輩是什麼樣的車商」<br>
+               <strong>目標：</strong>讓客戶看完後覺得：「這家車商看起來很誠實，可以放心。」</p>
+            
+            <div class="highlight-box">
+                <strong>💡 拍攝建議（極度重要）：</strong>
+                不需過度商業包裝。強調「真實、自然、有人味」。用手機拍攝即可，不需生硬的腳本，多捕捉工作日常。
+            </div>
+
+            <h3>分鏡腳本架構：</h3>
+            <ul>
+                <li><strong>1. 開場（10秒）：</strong>畫面（展示店面、車輛整齊排列、員工日常）。旁白字幕：「中古車市場最缺的，不是車。」(停一秒)「而是信任。」</li>
+                <li><strong>2. 創辦故事（30秒）：</strong>畫面（主角賢哥在店裡看車、與客戶聊天）。賢哥自然語氣旁白：「當初創立寶輩，其實只有一個想法。如果是我自己的家人要買車，我會不會放心？如果我自己都不敢開的車，我就不會賣給客人。」</li>
+                <li><strong>3. 品牌文化（40秒）：</strong>畫面（技師檢查車輛、整備細節、文件）。字幕重點（寶輩三個原則：1. 不賣事故車 2. 不賣泡水車 3. 不賣調表車）。</li>
+                <li><strong>4. 團隊文化（30秒）：</strong>畫面（業務、技師、團隊）。每人一句話（業務：「希望客人買車後還願意回來找我們。」/ 技師：「每台車都要像自己的車一樣檢查。」/ 員工：「誠信是寶輩最重要的文化。」）</li>
+                <li><strong>5. 客戶關係（30秒）：</strong>畫面（客戶交車、客戶笑、握手）。字幕：「我們不只是賣車。(停一秒) 我們希望成為客戶一輩子的汽車顧問。」</li>
+                <li><strong>6. 收尾（10秒）：</strong>畫面（全員工一起說：「歡迎來寶輩看車。」）。最後字幕（寶輩 Logo + 標語：「買寶輩愛車。」）</li>
+            </ul>
+
+            <h3>所需素材與發布位置：</h3>
+            <ul>
+                <li><strong>請寶輩協助拍攝：</strong>店面外觀、車輛展示、技師整備、業務介紹車、客戶交車、全員工合照。</li>
+                <li><strong>發布位置：</strong>Google 商家首頁、FB 置頂、IG 置頂、YouTube 首頁影片（作為寶輩的數位名片）。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>📊 行動二：GA4 數據與追蹤基礎建置 (需授權與確認)</h2>
+            <ul>
+                <li><strong>網站後台權限：</strong>取得寶輩國際官網的管理員帳號密碼，或請其合作工程師協助置入 GTM 追蹤代碼。</li>
+                <li><strong>Google 服務授權交接：</strong>若寶輩已有 GA4/GTM 帳號，請開通管理權限給誠通智匯；若無，決議由我方代為建立並共用。</li>
+                <li><strong>核心轉換事件定義：</strong>確認官網高價值行為（如：點擊 LINE 諮詢、撥打賞車專線、提交貸款試算、下載鑑定報告）。</li>
+                <li><strong>高流量影音授權：</strong>取得高流量影片原始檔案（MP4），以及 TikTok、YouTube 平台後台管理權限，以利數據爬取與再行銷。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>📁 行動三：專案啟動核心素材收集 (GEO 權威標記必備)</h2>
+            <ul>
+                <li><strong>精確地理座標：</strong>取得 Google 商家檔案 (GMB) 權限，提取精確實體店 CID 與經緯度。</li>
+                <li><strong>數位同源 (SameAs) 矩陣：</strong>統整 FB、IG、YT、TikTok、8891 車商主頁、Threads 等官方正確網址。</li>
+                <li><strong>權威背書：</strong>YES/SAVE/Goo 鑑定書高解析照片、公會證書、優良車商獎牌。</li>
+                <li><strong>品牌視覺：</strong>高解析去背 Logo (PNG/SVG)、品牌標準色 HEX 色碼。</li>
+                <li><strong>技術護城河佐證：</strong>特殊診斷設備實體照片 (如 Xentry)、配合之底盤/冷氣專科廠名單或合影。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🧠 數位資產與 SEO/GEO 內容矩陣展示</h2>
+            <p>佈局未來 6 個月的高事實密度關鍵字，全面霸屏搜尋引擎：</p>
+            
+            <div class="matrix-grid">
+                <div class="matrix-card">
+                    <h4>矩陣 1：中古車避坑指南 <br><small>(AI 搜尋最大流量)</small></h4>
+                    <span class="tag">中古車怎麼買不被騙</span> <span class="tag">如何判斷事故車/泡水車/調表車</span> 
+                    <span class="tag">試車要注意什麼</span> <span class="tag">買前檢查清單</span> 
+                    <span class="tag">常見 10 個陷阱</span> <span class="tag">低價陷阱解析</span> 
+                    <span class="tag">8891 買車注意事項</span> <span class="tag">價格差異原因</span> 
+                    <span class="tag">行情怎麼查</span> <span class="tag">貸款怎麼算/能貸多少</span> 
+                    <span class="tag">第三方鑑定必要性</span> <span class="tag">SAVE/YES/HOT 差異</span> 
+                    <span class="tag">交車流程</span>
+                </div>
+                <div class="matrix-card">
+                    <h4>矩陣 2：車況知識教育 <br><small>(建立專業信任)</small></h4>
+                    <span class="tag">五油三水是什麼</span> <span class="tag">必換耗材</span> 
+                    <span class="tag">保養週期</span> <span class="tag">判斷引擎/變速箱狀況</span> 
+                    <span class="tag">底盤檢查</span> <span class="tag">電腦檢測</span> 
+                    <span class="tag">車輛履歷</span> <span class="tag">整備流程</span> 
+                    <span class="tag">事故等級</span> <span class="tag">里程合理範圍</span> 
+                    <span class="tag">年份 vs 里程</span> <span class="tag">保值率</span> 
+                    <span class="tag">保固怎麼看/保固陷阱</span>
+                </div>
+                <div class="matrix-card">
+                    <h4>矩陣 3：車型專題 <br><small>(精準車款流量詞)</small></h4>
+                    <span class="tag">C300 怎麼選</span> <span class="tag">Camry 推薦</span> 
+                    <span class="tag">Altis 推薦</span> <span class="tag">CRV 推薦</span> 
+                    <span class="tag">RAV4 推薦</span> <span class="tag">BMW 3系列</span> 
+                    <span class="tag">Benz C Class</span> <span class="tag">Mazda 3</span> 
+                    <span class="tag">Lexus ES</span> <span class="tag">Tesla 分析</span> 
+                    <span class="tag">小資族推薦</span> <span class="tag">家庭用推薦</span> 
+                    <span class="tag">20萬/30萬/50萬/百萬推薦</span>
+                </div>
+                <div class="matrix-card">
+                    <h4>矩陣 4：貸款與財務 <br><small>(解決首購痛點)</small></h4>
+                    <span class="tag">貸款流程/利率/試算</span> <span class="tag">全額貸/找錢車是什麼</span> 
+                    <span class="tag">頭期款要多少</span> <span class="tag">信用瑕疵買車</span> 
+                    <span class="tag">貸款銀行選擇</span> <span class="tag">被拒原因</span> 
+                    <span class="tag">年齡限制</span> <span class="tag">年輕人買車貸款</span> 
+                    <span class="tag">車貸陷阱</span> <span class="tag">提前清償/轉貸</span> 
+                    <span class="tag">車貸與信貸差別</span> <span class="tag">試算案例</span>
+                </div>
+                <div class="matrix-card">
+                    <h4>矩陣 5：寶輩品牌內容 <br><small>(品牌護城河)</small></h4>
+                    <span class="tag">收車/整備/檢查/交車標準</span> <span class="tag">售後服務/保固制度</span> 
+                    <span class="tag">企業理念</span> <span class="tag">寶輩/賢哥創業故事</span> 
+                    <span class="tag">客戶成功案例</span> <span class="tag">車主訪談</span> 
+                    <span class="tag">客戶評價整理</span> <span class="tag">為何不賣事故車</span> 
+                    <span class="tag">如何挑車/訂價</span> <span class="tag">品牌精神</span>
+                </div>
+                <div class="matrix-card">
+                    <h4>矩陣 6：產業教育 <br><small>(建立行業權威)</small></h4>
+                    <span class="tag">市場分析</span> <span class="tag">價格形成機制</span> 
+                    <span class="tag">平台比較</span> <span class="tag">車商 vs 自售</span> 
+                    <span class="tag">折舊計算</span> <span class="tag">未來趨勢</span> 
+                    <span class="tag">電動二手車市場</span> <span class="tag">保值排行榜</span> 
+                    <span class="tag">車商收車標準</span> <span class="tag">利潤結構</span> 
+                    <span class="tag">汽車金融/保險</span> <span class="tag">保養與使用成本</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h3 style="color: var(--main-dark);">首篇數位資產文案 Demo (TikTok 影音深度解析)</h3>
+            <p style="color: #666;">針對首購族群痛點分析與品牌信任轉換</p>
+            <a href="#" class="demo-btn" target="_blank" onclick="alert('文案 Demo 準備中，請稍候更新連結！')">🔗 點此觀看文案 Demo</a>
+        </div>
+
+    </div>
+
+    <script>
+        // 密碼驗證邏輯
+        function checkPwd() {
+            var pwd = document.getElementById('pwd-input').value;
+            // 預設密碼為 baobei888，您可以在此修改
+            if(pwd === 'baobei888') {
+                document.getElementById('auth-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                alert('密碼錯誤！請輸入正確的查閱密碼。');
+                document.getElementById('pwd-input').value = '';
+            }
+        }
+        
+        // 支援按 Enter 鍵解鎖
+        document.getElementById("pwd-input").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                checkPwd();
+            }
+        });
+    </script>
+</body>
+</html>

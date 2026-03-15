@@ -12,114 +12,179 @@
         .progress-red { background-color: #ef4444; }
         .progress-yellow { background-color: #f59e0b; }
         .progress-green { background-color: #10b981; }
+        
+        /* 淡入動畫 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
     </style>
 </head>
-<body class="p-6 md:p-12">
-    <div class="max-w-5xl mx-auto">
+<body class="p-0 md:p-6 lg:p-12 overflow-x-hidden">
+
+    <div id="auth-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-900 bg-opacity-95 backdrop-blur-md">
+        <div class="bg-slate-800 p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-700 text-center max-w-md w-[90%] mx-auto transform transition-all">
+            <div class="text-5xl mb-4">🔐</div>
+            <h2 class="text-2xl font-bold text-white mb-2 tracking-wider">誠通智匯 機密文件</h2>
+            <p class="text-slate-400 mb-8 text-sm">請輸入查閱密碼以解鎖 TrueLink 戰略報告</p>
+            
+            <input type="password" id="pwd-input" placeholder="請輸入密碼" 
+                   class="w-full bg-slate-900 border border-slate-600 text-white px-4 py-4 rounded-xl mb-6 text-center text-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all">
+            
+            <button onclick="checkPwd()" 
+                    class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-6 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg shadow-blue-600/30 tracking-widest">
+                解鎖閱覽
+            </button>
+        </div>
+    </div>
+
+    <div id="main-content" class="max-w-5xl mx-auto hidden p-6 md:p-0">
         <header class="mb-12 border-b border-slate-700 pb-8">
             <div class="flex justify-between items-center mb-4">
                 <h1 class="text-4xl font-extrabold tracking-tight">寶輩國際 <span class="text-blue-500">TrueLink 戰略報告</span></h1>
-                <span class="bg-blue-600 px-4 py-1 rounded-full text-sm font-bold">V20.1 演算法執行中</span>
+                <span class="bg-blue-600 px-4 py-1 rounded-full text-sm font-bold shadow-lg shadow-blue-500/30">V20.1 演算法執行中</span>
             </div>
             <p class="text-slate-400 text-lg">致 賢哥：從「個人 IP」跨越到「數位資產帝國」的超車計畫</p>
         </header>
 
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="stat-card p-6 rounded-2xl">
+            <div class="stat-card p-6 rounded-2xl shadow-lg">
                 <h3 class="text-slate-400 mb-2">SEO 關鍵字佈局</h3>
                 <div class="text-3xl font-bold mb-4">🔴 危險</div>
-                <div class="w-full bg-slate-800 h-2 rounded-full"><div class="progress-red h-2 rounded-full" style="width: 25%"></div></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="progress-red h-full rounded-full" style="width: 25%"></div></div>
             </div>
-            <div class="stat-card p-6 rounded-2xl">
+            <div class="stat-card p-6 rounded-2xl shadow-lg">
                 <h3 class="text-slate-400 mb-2">內容資產密度</h3>
                 <div class="text-3xl font-bold mb-4">🟡 尚可</div>
-                <div class="w-full bg-slate-800 h-2 rounded-full"><div class="progress-yellow h-2 rounded-full" style="width: 55%"></div></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="progress-yellow h-full rounded-full" style="width: 55%"></div></div>
             </div>
-            <div class="stat-card p-6 rounded-2xl">
+            <div class="stat-card p-6 rounded-2xl shadow-lg">
                 <h3 class="text-slate-400 mb-2">AI 搜尋 (GEO) 友善度</h3>
                 <div class="text-3xl font-bold mb-4">🔴 待優化</div>
-                <div class="w-full bg-slate-800 h-2 rounded-full"><div class="progress-red h-2 rounded-full" style="width: 15%"></div></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="progress-red h-full rounded-full" style="width: 15%"></div></div>
             </div>
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-2">⚔️</span> 競對殘酷真相：為什麼他們在截流？</h2>
-            <div class="overflow-x-auto">
+            <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">⚔️</span> 競對殘酷真相：為什麼他們在截流？</h2>
+            <div class="overflow-x-auto rounded-2xl border border-slate-700 bg-slate-800/30">
                 <table class="w-full text-left border-collapse">
                     <thead>
-                        <tr class="bg-slate-800">
-                            <th class="p-4 border-b border-slate-700">指標</th>
-                            <th class="p-4 border-b border-slate-700">寶輩 (賢哥)</th>
-                            <th class="p-4 border-b border-slate-700 text-blue-400">阿慈車庫</th>
-                            <th class="p-4 border-b border-slate-700 text-blue-400">凱爾車業</th>
+                        <tr class="bg-slate-800/80">
+                            <th class="p-5 border-b border-slate-700 font-semibold text-slate-300">指標</th>
+                            <th class="p-5 border-b border-slate-700 font-semibold text-white">寶輩 (賢哥)</th>
+                            <th class="p-5 border-b border-slate-700 font-semibold text-blue-400">阿慈車庫</th>
+                            <th class="p-5 border-b border-slate-700 font-semibold text-blue-400">凱爾車業</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="border-b border-slate-800">
-                            <td class="p-4 font-bold">核心驅動</td>
-                            <td class="p-4">個人魅力 (影片)</td>
-                            <td class="p-4">知識產權 (SEO 文章)</td>
-                            <td class="p-4">品牌權威 (精品圖文)</td>
+                        <tr class="border-b border-slate-700/50 hover:bg-slate-800/50 transition-colors">
+                            <td class="p-5 font-bold text-slate-300">核心驅動</td>
+                            <td class="p-5">個人魅力 (影片)</td>
+                            <td class="p-5 text-slate-300">知識產權 (SEO 文章)</td>
+                            <td class="p-5 text-slate-300">品牌權威 (精品圖文)</td>
                         </tr>
-                        <tr class="border-b border-slate-800">
-                            <td class="p-4 font-bold">搜尋攔截</td>
-                            <td class="p-4 text-slate-500">僅限品牌字</td>
-                            <td class="p-4 text-green-400">全台二手車知識詞</td>
-                            <td class="p-4 text-green-400">高端進口車專業詞</td>
+                        <tr class="border-b border-slate-700/50 hover:bg-slate-800/50 transition-colors">
+                            <td class="p-5 font-bold text-slate-300">搜尋攔截</td>
+                            <td class="p-5 text-slate-500">僅限品牌字</td>
+                            <td class="p-5 text-green-400 font-medium">全台二手車知識詞</td>
+                            <td class="p-5 text-green-400 font-medium">高端進口車專業詞</td>
                         </tr>
-                        <tr>
-                            <td class="p-4 font-bold">AI 推薦機率</td>
-                            <td class="p-4 text-red-500">15% (找不到文字)</td>
-                            <td class="p-4 text-green-400">85% (資料完整)</td>
-                            <td class="p-4 text-green-400">70% (品質極佳)</td>
+                        <tr class="hover:bg-slate-800/50 transition-colors">
+                            <td class="p-5 font-bold text-slate-300">AI 推薦機率</td>
+                            <td class="p-5 text-red-400 font-medium">15% (找不到文字)</td>
+                            <td class="p-5 text-green-400 font-medium">85% (資料完整)</td>
+                            <td class="p-5 text-green-400 font-medium">70% (品質極佳)</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <section class="bg-blue-900/30 border border-blue-500/50 p-8 rounded-3xl mb-12">
-            <h2 class="text-2xl font-bold mb-4 highlight-gold">V20.1 推薦方案：Plan B 高速成長</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section class="bg-blue-900/20 border border-blue-500/30 p-8 md:p-10 rounded-3xl mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-blue-500 rounded-full blur-[80px] opacity-20"></div>
+            
+            <h2 class="text-2xl font-bold mb-6 highlight-gold relative z-10">V20.1 推薦方案：Plan B 高速成長</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
                 <div>
-                    <p class="text-slate-300 mb-4">這不是廣告費，這是蓋一棟會增值的「數位大樓」。</p>
-                    <ul class="space-y-2 text-sm text-slate-400">
-                        <li>• 每月 4 篇 AI 權威文章：鎖定「保時捷通病、雙B行情」等。</li>
-                        <li>• GEO 結構化數據導入：讓 ChatGPT 認識賢哥。</li>
+                    <p class="text-slate-300 mb-5 text-lg">這不是廣告費，這是蓋一棟會增值的「數位大樓」。</p>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> 每月 4 篇 AI 權威文章：鎖定保時捷通病等。</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> GEO 結構化數據導入：讓 ChatGPT 認識賢哥。</li>
                     </ul>
                 </div>
-                <div class="text-right">
-                    <div class="text-sm text-slate-400 uppercase">預估三年資產價值</div>
-                    <div class="text-5xl font-black text-blue-400">NT$ 8,064,000</div>
-                    <p class="text-xs text-slate-500 mt-2">※ 對比買廣告，可省下約 288 萬預算</p>
+                <div class="md:text-right flex flex-col justify-center">
+                    <div class="text-sm text-slate-400 uppercase tracking-widest mb-1">預估三年資產價值</div>
+                    <div class="text-5xl md:text-6xl font-black text-blue-400 mb-2" style="text-shadow: 0 0 20px rgba(96, 165, 250, 0.3);">NT$ 8,064,000</div>
+                    <p class="text-sm text-slate-500">※ 對比買廣告，可省下約 288 萬預算</p>
                 </div>
             </div>
         </section>
 
-        <section class="bg-slate-800/40 border border-slate-700 p-8 rounded-3xl mb-12">
-            <h2 class="text-2xl font-bold mb-6 text-white flex items-center"><span class="mr-2">📁</span> 專案會議紀錄與進度目錄</h2>
+        <section class="bg-slate-800/40 border border-slate-700 p-8 md:p-10 rounded-3xl mb-12">
+            <h2 class="text-2xl font-bold mb-8 text-white flex items-center"><span class="mr-3">📁</span> 專案會議紀錄與進度目錄</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <a href="meetings/20260315-meeting-01.html" target="_blank" class="block p-6 bg-slate-800 hover:bg-slate-700 rounded-2xl transition-all border border-slate-600 hover:border-blue-400 group transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-900/20">
-                    <div class="text-blue-400 text-sm font-bold mb-2">2026-03-15</div>
+                <a href="meetings/20260315-meeting-01.html" target="_blank" class="block p-6 bg-slate-800/80 hover:bg-slate-700 rounded-2xl transition-all duration-300 border border-slate-600 hover:border-blue-400 group transform hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/20">
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="bg-blue-900/50 text-blue-300 text-xs font-bold px-3 py-1 rounded-md">2026-03-15</div>
+                        <span class="text-slate-500 group-hover:text-blue-400 transition-colors">↗</span>
+                    </div>
                     <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">會議一：首期深度健檢與專案啟動</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">確立數位資產重構方向、市場差異化定位（護城河）、破除資訊不對稱與大數據精準引流戰略。</p>
                 </a>
                 
-                <a href="meetings/20260315-meeting-02.html" target="_blank" class="block p-6 bg-slate-800 hover:bg-slate-700 rounded-2xl transition-all border border-slate-600 hover:border-blue-400 group transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-900/20">
-                    <div class="text-blue-400 text-sm font-bold mb-2">2026-03-15</div>
+                <a href="meetings/20260315-meeting-02.html" target="_blank" class="block p-6 bg-slate-800/80 hover:bg-slate-700 rounded-2xl transition-all duration-300 border border-slate-600 hover:border-blue-400 group transform hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/20">
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="bg-blue-900/50 text-blue-300 text-xs font-bold px-3 py-1 rounded-md">2026-03-15</div>
+                        <span class="text-slate-500 group-hover:text-blue-400 transition-colors">↗</span>
+                    </div>
                     <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">會議二：重點檢核清單與內容矩陣</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">首頁品牌影片架構規劃、GA4數據追蹤與權限交接、GEO權威標記必備核心素材收集清單。</p>
                 </a>
             </div>
         </section>
 
-        <footer class="text-center">
-            <p class="text-slate-500 mb-6">「賢哥，社群贏一半，資產贏下半場。我們準備好了。」</p>
+        <footer class="text-center mt-16 mb-8">
+            <p class="text-slate-400 mb-8 text-lg font-medium tracking-wide">「賢哥，社群贏一半，資產贏下半場。我們準備好了。」</p>
             <a href="TrueLink_Babay_Docs.html" 
-               class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-12 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30">
-                啟動超車計畫
+               class="inline-block bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold py-4 px-12 rounded-full transition-all transform hover:scale-105 shadow-xl shadow-blue-600/20 text-lg tracking-wider">
+                🚀 啟動超車計畫
             </a>
         </footer>
     </div>
+
+    <script>
+        function checkPwd() {
+            var pwd = document.getElementById('pwd-input').value;
+            // 密碼設定為 baobei888
+            if(pwd === 'baobei888') {
+                // 隱藏登入畫面
+                document.getElementById('auth-screen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('auth-screen').style.display = 'none';
+                    // 顯示主內容並加入淡入動畫
+                    const mainContent = document.getElementById('main-content');
+                    mainContent.classList.remove('hidden');
+                    mainContent.classList.add('animate-fade-in');
+                }, 300); // 等待透明度過渡結束
+                
+            } else {
+                alert('密碼錯誤！請輸入正確的查閱密碼。');
+                document.getElementById('pwd-input').value = '';
+                document.getElementById('pwd-input').focus();
+            }
+        }
+        
+        // 支援按 Enter 鍵解鎖
+        document.getElementById("pwd-input").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                checkPwd();
+            }
+        });
+    </script>
 </body>
 </html>

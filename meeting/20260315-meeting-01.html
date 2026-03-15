@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寶輩國際 x 誠通智匯｜首期專案啟動會議紀錄</title>
+    <style>
+        :root {
+            --main-green: #2E5C38;
+            --main-dark: #0F2027;
+            --bg-color: #f4f7f6;
+            --gold: #c5a059;
+            --text-gray: #4a5568;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.8;
+        }
+        /* 密碼解鎖畫面 */
+        #auth-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100vh;
+            background: linear-gradient(135deg, var(--main-dark), var(--main-green));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: white;
+        }
+        .auth-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .auth-box h2 { margin-top: 0; letter-spacing: 2px; }
+        .auth-box input {
+            padding: 12px;
+            width: 80%;
+            margin: 20px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .auth-box button {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .auth-box button:hover { background-color: #b08d4a; }
+
+        /* 主內容區 */
+        #main-content {
+            display: none; /* 預設隱藏，解鎖後顯示 */
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .header-title {
+            text-align: center;
+            color: var(--main-dark);
+            border-bottom: 3px solid var(--main-green);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .meta-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--gold);
+        }
+        .meta-info p { margin: 5px 0; font-size: 1.05rem; }
+        
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--main-green);
+        }
+        .card h2 {
+            color: var(--main-green);
+            margin-top: 0;
+            font-size: 1.4rem;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+        }
+        ul { padding-left: 20px; color: var(--text-gray); }
+        li { margin-bottom: 15px; }
+        strong { color: var(--main-dark); }
+
+        /* 返回按鈕 */
+        .back-btn-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .back-btn {
+            display: inline-block;
+            background-color: var(--text-gray);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-btn:hover { background-color: var(--main-dark); }
+    </style>
+</head>
+<body>
+
+    <div id="auth-screen">
+        <div class="auth-box">
+            <h2>🔒 誠通智匯 機密商業文件</h2>
+            <p>請輸入查閱密碼以解鎖會議紀錄 (會議一)</p>
+            <input type="password" id="pwd-input" placeholder="請輸入密碼">
+            <br>
+            <button onclick="checkPwd()">解鎖文件</button>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <h1 class="header-title">寶輩國際汽車 x 誠通智匯<br><span style="font-size: 1.2rem; color: #666;">首期深度健檢與 GEO 專案啟動會議紀錄</span></h1>
+
+        <div class="meta-info">
+            <p><strong>📅 會議時間：</strong>2026年3月15日</p>
+            <p><strong>📍 會議地點：</strong>新北市林口區</p>
+            <p><strong>👥 與會人員：</strong>寶輩國際 張俊賢（賢哥）、誠通智匯 林士華</p>
+            <p><strong>🎯 會議主旨：</strong>確立寶輩國際之數位資產重構方向、市場差異化定位（護城河）及數據行銷策略。</p>
+        </div>
+
+        <div class="card">
+            <h2>一、 產業痛點分析與數位平台佈局 (市場洞察)</h2>
+            <ul>
+                <li><strong>標竿學習與市場痛點：</strong>會中探討了大陸「懂車帝」APP 的成功模式，反觀台灣中古車市場，目前普遍存在資訊不透明、缺乏標準化鑑定機制等痛點，且消費者的信任度較低。</li>
+                <li><strong>導正定價亂象：</strong>針對市場上（如 8891 平台）常見的「假價格、真騙客」現象，寶輩將採取完全透明的定價策略，不以空氣車或不實低價吸引盲目比價的客群。</li>
+                <li><strong>「天書」權威數據應用：</strong>為了建立公信力，後續數位資產建置將導入銀行貸款評估所依據的「權威（天書）」價格標準（例如以 12 年的 Camry 為例，實價與貸款額度的落差），透過真實數據建立消費者的信任感。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>二、 核心客戶畫像與品牌護城河 (Persona & The Moat)</h2>
+            <ul>
+                <li><strong>核心品牌理念：</strong>寶輩的核心價值在於建立「信任」，以「買寶輩愛車」為出發點，致力於成為客戶「一輩子的汽車顧問」，而不單單只是一次性的車輛買賣。</li>
+                <li><strong>客群定位轉換：</strong>目前市場上有許多年輕客群（如 21 歲購買 C300），主要購車動機為注重外表，較不懂車。未來的行銷內容（GEO 佈局）將過濾掉只看極低價格、忽視品質的劣質客戶，轉向吸引真正需要用車、重視售後保障與車況透明的優質客群。</li>
+                <li><strong>企業願景與售後佈局：</strong>寶輩致力於走向「幸福企業」的經營模式。在售後服務上，除了目前仰賴的第三方聯盟（SAVE、YES 等）保固外，未來規劃推出寶輩專屬的保固機制（如引擎、變速箱 1-2 年保固），加深品牌護城河。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>三、 數據賦能與行銷戰略 (GA4 & Marketing Strategy)</h2>
+            <ul>
+                <li><strong>終止無效行銷：</strong>經檢討，過往委託的廣告代操成效不彰，主因在於缺乏數據追蹤機制（如下載量、轉換率等數據不明），淪為盲目消耗預算。</li>
+                <li><strong>數據透明與技術埋設：</strong>誠通智匯將全面接手數位足跡的追蹤，建立類似後台數據庫的追蹤機制，確保未來的行銷預算皆能以 ROI（投資報酬率）和實際轉換為導向。</li>
+                <li><strong>擴充服務版圖：</strong>針對有特殊需求但預算考量的客戶，可推廣「代客尋車」或「全額貸、找錢車」的業務模式，透過精準的數位漏斗進行分流。</li>
+            </ul>
+        </div>
+
+        <div class="back-btn-container">
+            <a href="../index.html" class="back-btn">⬅ 返回專案首頁目錄</a>
+        </div>
+
+    </div>
+
+    <script>
+        // 密碼驗證邏輯
+        function checkPwd() {
+            var pwd = document.getElementById('pwd-input').value;
+            // 密碼設定為 baobei888
+            if(pwd === 'baobei888') {
+                document.getElementById('auth-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                alert('密碼錯誤！請輸入正確的查閱密碼。');
+                document.getElementById('pwd-input').value = '';
+            }
+        }
+        
+        // 支援按 Enter 鍵解鎖
+        document.getElementById("pwd-input").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                checkPwd();
+            }
+        });
+    </script>
+</body>
+</html>

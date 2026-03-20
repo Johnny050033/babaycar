@@ -17,7 +17,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:type" content="website">
 <meta property="og:title" content="2026 全台避坑買車清單｜寶輩國際嚴選">
 <meta property="og:description" content="別再迷信網路最低價！教您看懂骨架結構、第三方認證與保修履歷。立即領取 PDF 攻略與專屬購車金一萬元！">
-<meta property="og:image" content="https://您的專屬網址/babay-premium-used-car-cover.jpg"> <meta property="og:url" content="https://您的專屬網址/used-car-buying-guide-2026.html"> <meta property="og:site_name" content="寶輩國際貿易">
+<meta property="og:image" content="https://www.babay.com.tw/avoid-used-car-trap-blue-car.jpg"> 
+<meta property="og:url" content="https://www.babay.com.tw/used-car-buying-guide-2026.html"> 
+<meta property="og:site_name" content="寶輩國際貿易">
 
 <script type="application/ld+json">
 {
@@ -25,286 +27,314 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@type": "AutoDealer",
   "name": "寶輩國際貿易",
   "image": "https://www.babay.com.tw/assets/images/logo.png",
-  "@id": "",
+  "@id": "https://www.babay.com.tw/#autodealer",
   "url": "https://www.babay.com.tw/",
-  "telephone": "", 
-  "taxID": "[請填寫寶輩國際貿易真實統編]",
+  "telephone": "+886-2-2601-3838", 
+  "taxID": "87654321", // 💡 這裡使用一個假設的台灣統一編號作為示例
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "中正路1號", // 💡 請填寫真實的街道地址
     "addressLocality": "林口區",
     "addressRegion": "新北市",
+    "postalCode": "244", // 💡 這裡是林口區的郵遞區號
     "addressCountry": "TW"
   },
-  "description": "寶輩國際貿易專營嚴選中古車，車況透明、專業鑑定。打破傳統中古車商資訊不透明印象，提供一輩子的汽車顧問服務。"
+  "description": "寶輩國際貿易專營嚴選中古車，車況透明、專業鑑定。打破傳統中古車商資訊不透明印象，提供一輩子的汽車顧問服務。",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "25.077218", // 💡 這裡使用假設的座標作為示例
+    "longitude": "121.365611" // 💡 請填寫真實的經緯度座標，以利地圖顯示
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/babay.usedcar/", // 💡 請填寫真實的 Facebook 粉絲專頁網址
+    "https://line.me/R/ti/p/@535cdwhx" // 💡 請填寫真實的 LINE 官方帳號網址
+  ]
 }
 </script>
 
 <style>
-  /* --- 核心 CSS 變數 --- */
-  :root {
-    --bg-main: #FFFFFF;        
-    --card-bg: #1A1A1A;        
-    --text-primary: #111111;   
-    --text-inverse: #FFFFFF;   
-    --accent-pink: #FFB5A7;    
-    --accent-yellow: #FFD166;  
-    --cta-red: #E63946;        
-    --border-color: #E0E0E0;
-  }
+ /* --- 核心 CSS 變數 --- */
+ :root {
+ --bg-main: #FFFFFF; 
+ --card-bg: #1A1A1A; 
+ --text-primary: #111111; 
+ --text-inverse: #FFFFFF; 
+ --accent-pink: #FFB5A7; 
+ --accent-yellow: #FFD166; 
+ --cta-red: #E63946; 
+ --border-color: #E0E0E0;
+ }
 
-  /* --- 15 組色系定義 --- */
-  [data-theme="titanium"] { --bg-main: #CED4DA; --card-bg: #6C757D; --text-primary: #212529; --text-inverse: #FFFFFF; --accent-pink: #F8F9FA; --accent-yellow: #FFC300; --cta-red: #C1121F; }
-  [data-theme="racing-red"] { --bg-main: #141414; --card-bg: #2B0000; --text-primary: #F0F0F0; --text-inverse: #FFFFFF; --accent-pink: #FF4D4D; --accent-yellow: #FFB300; --cta-red: #D90429; }
-  [data-theme="midnight-blue"] { --bg-main: #0B132B; --card-bg: #1C2541; --text-primary: #EAEAEA; --text-inverse: #FFFFFF; --accent-pink: #5BC0BE; --accent-yellow: #F4A261; --cta-red: #E63946; }
-  [data-theme="racing-green"] { --bg-main: #0F1C15; --card-bg: #1B3022; --text-primary: #E8F1E9; --text-inverse: #FFFFFF; --accent-pink: #D4AF37; --accent-yellow: #E9C46A; --cta-red: #C1121F; }
-  [data-theme="matte-carbon"] { --bg-main: #212529; --card-bg: #343A40; --text-primary: #F8F9FA; --text-inverse: #FFFFFF; --accent-pink: #ADB5BD; --accent-yellow: #00FF87; --cta-red: #FF0054; }
-  [data-theme="pearl-white"] { --bg-main: #FDFDFD; --card-bg: #F1F3F5; --text-primary: #212529; --text-inverse: #111111; --accent-pink: #FFB5A7; --accent-yellow: #FCA311; --cta-red: #D90429; }
-  [data-theme="desert-metal"] { --bg-main: #E9ECEF; --card-bg: #D4A373; --text-primary: #343A40; --text-inverse: #111111; --accent-pink: #FAEDCD; --accent-yellow: #FEFAE0; --cta-red: #BC4749; }
-  [data-theme="tech-ice"] { --bg-main: #E0FBFC; --card-bg: #98C1D9; --text-primary: #293241; --text-inverse: #111111; --accent-pink: #FFFFFF; --accent-yellow: #EE6C4D; --cta-red: #3D5A80; }
-  [data-theme="luxury-purple"] { --bg-main: #10002B; --card-bg: #240046; --text-primary: #E0AAFF; --text-inverse: #FFFFFF; --accent-pink: #C77DFF; --accent-yellow: #FFD166; --cta-red: #9D4EDD; }
-  [data-theme="cyberpunk"] { --bg-main: #0D0221; --card-bg: #261447; --text-primary: #00F0FF; --text-inverse: #FFFFFF; --accent-pink: #FF003C; --accent-yellow: #FCEE09; --cta-red: #FF003C; }
-  [data-theme="vintage-leather"] { --bg-main: #FEFAE0; --card-bg: #606C38; --text-primary: #283618; --text-inverse: #FFFFFF; --accent-pink: #DDA15E; --accent-yellow: #BC6C25; --cta-red: #A98467; }
-  [data-theme="neon-night"] { --bg-main: #000000; --card-bg: #1A1A1A; --text-primary: #39FF14; --text-inverse: #FFFFFF; --accent-pink: #BC13FE; --accent-yellow: #FFFF00; --cta-red: #FF073A; }
-  [data-theme="ocean-dive"] { --bg-main: #03045E; --card-bg: #0077B6; --text-primary: #CAF0F8; --text-inverse: #FFFFFF; --accent-pink: #90E0EF; --accent-yellow: #00B4D8; --cta-red: #F72585; }
-  [data-theme="cherry"] { --bg-main: #FFF0F3; --card-bg: #FFB5A7; --text-primary: #590D22; --text-inverse: #111111; --accent-pink: #FFCCD5; --accent-yellow: #FF8FA3; --cta-red: #C9184A; }
-  [data-theme="black-gold"] { --bg-main: #000000; --card-bg: #141414; --text-primary: #E5E5E5; --text-inverse: #FFFFFF; --accent-pink: #BF953F; --accent-yellow: #FCF6BA; --cta-red: #AA771C; }
-  [data-theme="official"] { --bg-main: #FFFFFF; --card-bg: #1A1A1A; --text-primary: #111111; --text-inverse: #FFFFFF; --accent-pink: #FFB5A7; --accent-yellow: #FFD166; --cta-red: #E63946; --border-color: #E0E0E0; }
-  [data-theme="premium-dark"] { --bg-main: #111111; --card-bg: #2A2A2A; --text-primary: #F8F9FA; --text-inverse: #F8F9FA; --accent-pink: #D4AF37; --accent-yellow: #FFD166; --cta-red: #E63946; --border-color: #333; }
-  [data-theme="tech-grey"] { --bg-main: #F4F5F7; --card-bg: #FFFFFF; --text-primary: #2C3E50; --text-inverse: #111111; --accent-pink: #A8DADC; --accent-yellow: #F4A261; --cta-red: #E63946; --border-color: #D1D8E0; }
+ /* --- 15 組色系定義 --- */
+ [data-theme="titanium"] { --bg-main: #CED4DA; --card-bg: #6C757D; --text-primary: #212529; --text-inverse: #FFFFFF; --accent-pink: #F8F9FA; --accent-yellow: #FFC300; --cta-red: #C1121F; }
+ [data-theme="racing-red"] { --bg-main: #141414; --card-bg: #2B0000; --text-primary: #F0F0F0; --text-inverse: #FFFFFF; --accent-pink: #FF4D4D; --accent-yellow: #FFB300; --cta-red: #D90429; }
+ [data-theme="midnight-blue"] { --bg-main: #0B132B; --card-bg: #1C2541; --text-primary: #EAEAEA; --text-inverse: #FFFFFF; --accent-pink: #5BC0BE; --accent-yellow: #F4A261; --cta-red: #E63946; }
+ [data-theme="racing-green"] { --bg-main: #0F1C15; --card-bg: #1B3022; --text-primary: #E8F1E9; --text-inverse: #FFFFFF; --accent-pink: #D4AF37; --accent-yellow: #E9C46A; --cta-red: #C1121F; }
+ [data-theme="matte-carbon"] { --bg-main: #212529; --card-bg: #343A40; --text-primary: #F8F9FA; --text-inverse: #FFFFFF; --accent-pink: #ADB5BD; --accent-yellow: #00FF87; --cta-red: #FF0054; }
+ [data-theme="pearl-white"] { --bg-main: #FDFDFD; --card-bg: #F1F3F5; --text-primary: #212529; --text-inverse: #111111; --accent-pink: #FFB5A7; --accent-yellow: #FCA311; --cta-red: #D90429; }
+ [data-theme="desert-metal"] { --bg-main: #E9ECEF; --card-bg: #D4A373; --text-primary: #343A40; --text-inverse: #111111; --accent-pink: #FAEDCD; --accent-yellow: #FEFAE0; --cta-red: #BC4749; }
+ [data-theme="tech-ice"] { --bg-main: #E0FBFC; --card-bg: #98C1D9; --text-primary: #293241; --text-inverse: #111111; --accent-pink: #FFFFFF; --accent-yellow: #EE6C4D; --cta-red: #3D5A80; }
+ [data-theme="luxury-purple"] { --bg-main: #10002B; --card-bg: #240046; --text-primary: #E0AAFF; --text-inverse: #FFFFFF; --accent-pink: #C77DFF; --accent-yellow: #FFD166; --cta-red: #9D4EDD; }
+ [data-theme="cyberpunk"] { --bg-main: #0D0221; --card-bg: #261447; --text-primary: #00F0FF; --text-inverse: #FFFFFF; --accent-pink: #FF003C; --accent-yellow: #FCEE09; --cta-red: #FF003C; }
+ [data-theme="vintage-leather"] { --bg-main: #FEFAE0; --card-bg: #606C38; --text-primary: #283618; --text-inverse: #FFFFFF; --accent-pink: #DDA15E; --accent-yellow: #BC6C25; --cta-red: #A98467; }
+ [data-theme="neon-night"] { --bg-main: #000000; --card-bg: #1A1A1A; --text-primary: #39FF14; --text-inverse: #FFFFFF; --accent-pink: #BC13FE; --accent-yellow: #FFFF00; --cta-red: #FF073A; }
+ [data-theme="ocean-dive"] { --bg-main: #03045E; --card-bg: #0077B6; --text-primary: #CAF0F8; --text-inverse: #FFFFFF; --accent-pink: #90E0EF; --accent-yellow: #00B4D8; --cta-red: #F72585; }
+ [data-theme="cherry"] { --bg-main: #FFF0F3; --card-bg: #FFB5A7; --text-primary: #590D22; --text-inverse: #111111; --accent-pink: #FFCCD5; --accent-yellow: #FF8FA3; --cta-red: #C9184A; }
+ [data-theme="black-gold"] { --bg-main: #000000; --card-bg: #141414; --text-primary: #E5E5E5; --text-inverse: #FFFFFF; --accent-pink: #BF953F; --accent-yellow: #FCF6BA; --cta-red: #AA771C; }
+ [data-theme="official"] { --bg-main: #FFFFFF; --card-bg: #1A1A1A; --text-primary: #111111; --text-inverse: #FFFFFF; --accent-pink: #FFB5A7; --accent-yellow: #FFD166; --cta-red: #E63946; --border-color: #E0E0E0; }
+ [data-theme="premium-dark"] { --bg-main: #111111; --card-bg: #2A2A2A; --text-primary: #F8F9FA; --text-inverse: #F8F9FA; --accent-pink: #D4AF37; --accent-yellow: #FFD166; --cta-red: #E63946; --border-color: #333; }
+ [data-theme="tech-grey"] { --bg-main: #F4F5F7; --card-bg: #FFFFFF; --text-primary: #2C3E50; --text-inverse: #111111; --accent-pink: #A8DADC; --accent-yellow: #F4A261; --cta-red: #E63946; --border-color: #D1D8E0; }
 
-  /* --- 基礎樣式與排版 --- */
-  body {
-    margin: 0; padding: 0;
-    font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
-    background-color: var(--bg-main); color: var(--text-primary);
-    transition: all 0.3s ease; padding-bottom: 90px;
-  }
+ /* --- 基礎樣式與排版 --- */
+ body {
+ margin: 0; padding: 0;
+ font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+ background-color: var(--bg-main); color: var(--text-primary);
+ transition: all 0.3s ease; padding-bottom: 90px;
+ }
 
-  /* --- 頂部主題切換器 --- */
-  .theme-switcher-bar {
-    position: fixed; top: 0; left: 0; width: 100%;
-    background: #111; padding: 10px 15px; z-index: 1000;
-    display: flex; justify-content: center; align-items: center; gap: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5); box-sizing: border-box;
-  }
-  .theme-switcher-bar label { color: #FFF; font-size: 13px; font-weight: bold; }
-  .theme-switcher-bar select {
-    padding: 6px; border-radius: 4px; border: none;
-    background: #333; color: #FFF; font-weight: bold; cursor: pointer; max-width: 60%;
-  }
+ /* --- 頂部主題切換器 --- */
+ .theme-switcher-bar {
+ position: fixed; top: 0; left: 0; width: 100%;
+ background: #111; padding: 10px 15px; z-index: 1000;
+ display: flex; justify-content: center; align-items: center; gap: 10px;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.5); box-sizing: border-box;
+ }
+ .theme-switcher-bar label { color: #FFF; font-size: 13px; font-weight: bold; }
+ .theme-switcher-bar select {
+ padding: 6px; border-radius: 4px; border: none;
+ background: #333; color: #FFF; font-weight: bold; cursor: pointer; max-width: 60%;
+ }
 
-  /* --- 內容容器 --- */
-  .container { max-width: 600px; margin: 60px auto 0; padding: 20px; }
+ /* --- 內容容器 --- */
+ .container { max-width: 600px; margin: 60px auto 0; padding: 20px; }
 
-  /* --- 卡片與區塊設計 --- */
-  .slide-card {
-    background: var(--card-bg); border-radius: 16px; padding: 30px; margin-bottom: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative; overflow: hidden;
-  }
-  
-  .slide-card.hero-card {
-    background: var(--bg-main); border: 2px solid var(--card-bg); text-align: center;
-  }
-  .hero-card h2 { font-size: 28px; color: var(--text-primary); margin-bottom: 10px; line-height: 1.3; }
-  .hero-card .highlight-yellow {
-    background: linear-gradient(180deg, transparent 60%, var(--accent-yellow) 40%); display: inline;
-  }
+ /* --- 卡片與區塊設計 --- */
+ .slide-card {
+ background: var(--card-bg); border-radius: 16px; padding: 30px; margin-bottom: 30px;
+ box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative; overflow: hidden;
+ }
 
-  .slide-card:not(.hero-card) { color: var(--text-inverse); }
+ .slide-card.hero-card {
+ background: var(--bg-main); border: 2px solid var(--card-bg); text-align: center;
+ }
+ .hero-card h2 { font-size: 28px; color: var(--text-primary); margin-bottom: 10px; line-height: 1.3; }
+ .hero-card .highlight-yellow {
+ background: linear-gradient(180deg, transparent 60%, var(--accent-yellow) 40%); display: inline;
+ }
 
-  .tag-pink {
-    background-color: var(--accent-pink); color: #111; padding: 4px 12px;
-    border-radius: 20px; font-size: 13px; font-weight: bold; display: inline-block; margin-bottom: 15px;
-  }
+ .slide-card:not(.hero-card) { color: var(--text-inverse); }
 
-  h2.step-title {
-    font-size: 24px; margin-top: 0; border-bottom: 2px solid var(--accent-yellow);
-    padding-bottom: 10px; display: inline-block;
-  }
+ .tag-pink {
+ background-color: var(--accent-pink); color: #111; padding: 4px 12px;
+ border-radius: 20px; font-size: 13px; font-weight: bold; display: inline-block; margin-bottom: 15px;
+ }
 
-  p.desc { font-size: 16px; line-height: 1.8; margin-bottom: 20px; letter-spacing: 0.5px; }
+ h2.step-title {
+ font-size: 24px; margin-top: 0; border-bottom: 2px solid var(--accent-yellow);
+ padding-bottom: 10px; display: inline-block;
+ }
 
-  /* --- 圖片響應式優化 --- */
-  .img-fluid {
-    width: 100%; border-radius: 8px; display: block; margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); object-fit: cover;
-  }
-  
-  /* 對比圖並排 */
-  .compare-row { display: flex; gap: 10px; margin-bottom: 20px; }
-  .compare-row img { flex: 1; width: 50%; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-  .compare-bad { border: 2px solid #888; filter: grayscale(50%); }
-  .compare-good { border: 2px solid var(--accent-yellow); }
+ p.desc { font-size: 16px; line-height: 1.8; margin-bottom: 20px; letter-spacing: 0.5px; }
 
-  /* 優惠券區塊特化 */
-  .coupon-box {
-    background: rgba(255, 255, 255, 0.1); border: 2px dashed var(--accent-yellow);
-    border-radius: 8px; padding: 20px; text-align: center; margin: 20px 0;
-  }
-  [data-theme="titanium"] .coupon-box { background: rgba(0,0,0,0.2); }
-  .coupon-box h3 { margin: 0 0 10px 0; color: var(--accent-yellow); }
-  .coupon-code { 
-    font-size: 28px; font-weight: 900; letter-spacing: 2px; 
-    color: #FFF; background: var(--cta-red); 
-    display: inline-block; padding: 5px 15px; border-radius: 4px;
-  }
-  .coupon-hint { font-size: 13px; opacity: 0.9; margin-top: 10px; color: var(--text-inverse); font-weight: bold; }
+ /* --- 圖片響應式優化 --- */
+ .img-fluid {
+ width: 100%; border-radius: 8px; display: block; margin-bottom: 20px;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.2); object-fit: cover;
+ }
 
-  /* --- 列表與總結 --- */
-  ul.check-list { list-style: none; padding: 0; margin: 0; }
-  ul.check-list li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; font-size: 16px;}
-  ul.check-list li::before { content: "\2714"; color: var(--accent-yellow); margin-right: 10px; font-size: 20px; }
+ /* 對比圖並排 */
+ .compare-row { display: flex; gap: 10px; margin-bottom: 20px; }
+ .compare-row img { flex: 1; width: 50%; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+ .compare-bad { border: 2px solid #888; filter: grayscale(50%); }
+ .compare-good { border: 2px solid var(--accent-yellow); }
 
-  /* --- 引導小字 --- */
-  .swipe-hint { text-align: center; font-size: 14px; color: var(--text-primary); opacity: 0.7; margin-top: 15px; font-weight: bold; }
-  .slide-card:not(.hero-card) .swipe-hint { color: var(--text-inverse); }
+ /* 優惠券區塊特化 */
+ .coupon-box {
+ background: rgba(255, 255, 255, 0.1); border: 2px dashed var(--accent-yellow);
+ border-radius: 8px; padding: 20px; text-align: center; margin: 20px 0;
+ }
+ [data-theme="titanium"] .coupon-box { background: rgba(0,0,0,0.2); }
+ .coupon-box h3 { margin: 0 0 10px 0; color: var(--accent-yellow); }
+ .coupon-code { 
+ font-size: 28px; font-weight: 900; letter-spacing: 2px; 
+ color: #FFF; background: var(--cta-red); 
+ display: inline-block; padding: 5px 15px; border-radius: 4px;
+ }
+ .coupon-hint { font-size: 13px; opacity: 0.9; margin-top: 10px; color: var(--text-inverse); font-weight: bold; }
 
-  /* --- 底部懸浮 CTA --- */
-  .sticky-cta {
-    position: fixed; bottom: 0; left: 0; width: 100%;
-    background: var(--cta-red); padding: 15px 0; text-align: center;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.3); z-index: 1000;
-  }
-  .sticky-cta a {
-    color: #FFFFFF; text-decoration: none; font-size: 18px; font-weight: bold;
-    display: block; letter-spacing: 1px;
-  }
-  .sticky-cta a::after { content: " \25BA"; } 
+ /* --- 列表與總結 --- */
+ ul.check-list { list-style: none; padding: 0; margin: 0; }
+ ul.check-list li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; font-size: 16px;}
+ ul.check-list li::before { content: "\2714"; color: var(--accent-yellow); margin-right: 10px; font-size: 20px; }
+
+ /* --- 引導小字 --- */
+ .swipe-hint { text-align: center; font-size: 14px; color: var(--text-primary); opacity: 0.7; margin-top: 15px; font-weight: bold; }
+ .slide-card:not(.hero-card) .swipe-hint { color: var(--text-inverse); }
+
+ /* --- 底部懸浮 CTA --- */
+ .sticky-cta {
+ position: fixed; bottom: 0; left: 0; width: 100%;
+ background: var(--cta-red); padding: 15px 0; text-align: center;
+ box-shadow: 0 -4px 10px rgba(0,0,0,0.3); z-index: 1000;
+ }
+ .sticky-cta a {
+ color: #FFFFFF; text-decoration: none; font-size: 18px; font-weight: bold;
+ display: block; letter-spacing: 1px;
+ }
+ .sticky-cta a::after { content: " \25BA"; } 
 </style>
 </head>
-<body data-theme="titanium"> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR4PHD3C"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <div class="theme-switcher-bar">
-    <label for="themeSelect">🎨 色系預覽：</label>
-    <select id="themeSelect" onchange="changeTheme()">
-      <option value="titanium" selected>11. 鈦晶銀 (預設套用)</option>
-      <option value="official">寶輩官方 (白/黑/粉/黃)</option>
-      <option value="premium-dark">黑卡尊爵風 (深黑/金)</option>
-      <option value="tech-grey">科技冷調風 (淺灰/藍/白)</option>
-      <option value="racing-red">1. 競技熱血 (紅/黑)</option>
-      <option value="cyberpunk">9. 賽博龐克 (黑/霓虹)</option>
-      <option value="black-gold">15. 黑金奢華 (黑/金)</option>
-    </select>
-  </div>
+<body data-theme="titanium"> 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR4PHD3C"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="theme-switcher-bar">
+ <label for="themeSelect">🎨 色系預覽：</label>
+ <select id="themeSelect" onchange="changeTheme()">
+ <option value="titanium" selected>11. 鈦晶銀 (預設套用)</option>
+ <option value="official">寶輩官方 (白/黑/粉/黃)</option>
+ <option value="premium-dark">黑卡尊爵風 (深黑/金)</option>
+ <option value="tech-grey">科技冷調風 (淺灰/藍/白)</option>
+ <option value="racing-red">1. 競技熱血 (紅/黑)</option>
+ <option value="cyberpunk">9. 賽博龐克 (黑/霓虹)</option>
+ <option value="black-gold">15. 黑金奢華 (黑/金)</option>
+ </select>
+ </div>
 
-  <div class="container">
-    
-    <div class="slide-card hero-card">
-      <div class="tag-pink">建議直接收藏</div>
-      <h1 style="font-size: 28px; margin: 0 0 10px 0; line-height: 1.3;"><span class="highlight-yellow">2026 全台避坑買車清單：寶輩國際嚴選</span></h1>
-      <p class="desc" style="margin-bottom: 25px;">只要這一篇，教您避開 99% 的買車隱藏地雷。</p>
-      
-      <img src="babay-premium-used-car-cover.jpg" alt="寶輩國際嚴選高級中古車，車況透明絕對信賴" class="img-fluid" style="box-shadow: none;">
-      
-      <div class="swipe-hint">往下滑繼續看下去</div>
-    </div>
+ <div class="container">
+ 
+ <div class="slide-card hero-card">
+ <div class="tag-pink">建議直接收藏</div>
+ <h1 style="font-size: 28px; margin: 0 0 10px 0; line-height: 1.3;"><span class="highlight-yellow">2026 全台避坑買車清單：寶輩國際嚴選</span></h1>
+ <p class="desc" style="margin-bottom: 25px;">只要這一篇，教您避開 99% 的買車隱藏地雷。</p>
+ 
+ <img src="babay-blue-sportscar-buying-guide.jpg" alt="寶輩國際嚴選高級中古車，車況透明絕對信賴" class="img-fluid" style="box-shadow: none;">
+ 
+ <div class="swipe-hint">往下滑繼續看下去</div>
+ </div>
 
-    <div class="slide-card">
-      <div class="tag-pink">揭開業界真相</div>
-      <h2 class="step-title">別再迷信「網路最低價」</h2>
-      
-      <div class="compare-row">
-        <img src="avoid-accident-used-car-trap.jpg" alt="拒絕重大事故車與泡水車陷阱" class="compare-bad" title="貪小便宜的代價：事故車風險">
-        <img src="babay-founder-trusted-dealer.jpg" alt="寶輩國際創辦人賢哥，堅持不賣事故車" class="compare-good" title="寶輩國際：堅持嚴格把關">
-      </div>
-      
-      <p class="desc">買車買的是「安全」與「誠信」。羊毛出在羊身上，過低於市場行情的報價，往往是重大事故車、泡水車或調表車的噩夢開端。</p>
-      <div class="swipe-hint">往下滑看如何挑選優質好車 </div>
-    </div>
+ <div class="slide-card">
+ <div class="tag-pink">揭開業界真相</div>
+ <h2 class="step-title">別再迷信「網路最低價」</h2>
+ 
+ <div class="compare-row">
+ <img src="avoid-accident-used-car-trap.jpg" alt="拒絕重大事故車與泡水車陷阱" class="compare-bad" title="貪小便宜的代價：事故車風險">
+ <img src="babay-founder-trusted-dealer.jpg" alt="寶輩國際創辦人賢哥，堅持不賣事故車" class="compare-good" title="寶輩國際：堅持嚴格把關">
+ </div>
+ 
+ <p class="desc">買車買的是「安全」與「誠信」。羊毛出在羊身上，過低於市場行情的報價，往往是重大事故車、泡水車或調表車的噩夢開端。</p>
+ <div class="swipe-hint">往下滑看如何挑選優質好車 </div>
+ </div>
 
-    <div class="slide-card">
-      <div class="tag-pink">寶輩嚴選守則 01</div>
-      <h2 class="step-title">骨架結構深度檢查</h2>
-      
-      <img src="babay-mechanic-engine-inspection.jpg" alt="寶輩專業技師細心檢查引擎室與車體骨架結構" class="img-fluid">
-      
-      <p class="desc">寶輩專業團隊在收車第一線為您把關。我們嚴格檢驗引擎室大樑、避震器座與車體結構，從骨架看起，給您最紮實的安全感。</p>
-    </div>
+ <div class="slide-card">
+ <div class="tag-pink">寶輩嚴選守則 01</div>
+ <h2 class="step-title">骨架結構深度檢查</h2>
+ 
+ <img src="babay-mechanic-engine-inspection.jpg" alt="寶輩專業技師細心檢查引擎室與車體骨架結構" class="img-fluid">
+ 
+ <p class="desc">寶輩專業團隊在收車第一線為您把關。我們嚴格檢驗引擎室大樑、避震器座與車體結構，從骨架看起，給您最紮實的安全感。</p>
+ </div>
 
-    <div class="slide-card">
-      <div class="tag-pink">寶輩嚴選守則 02</div>
-      <h2 class="step-title">第三方認證與保修履歷</h2>
-      
-      <div class="compare-row">
-        <img src="babay-goo-certification-check.jpg" alt="寶輩中古車全面通過 Goo 第三方鑑定安全憑證" class="img-fluid" style="margin-bottom:0; width: 48%;">
-        <img src="babay-save-warranty-certificate.jpg" alt="SAVE 保修聯盟車輛保固書" class="img-fluid" style="margin-bottom:0; width: 48%;">
-      </div>
-      
-      <p class="desc" style="margin-top:20px;">自己的車況自己說了不算！寶輩全車系導入 <strong>Goo / SAVE 第三方公正單位鑑定</strong>，並提供完善的車輛保固書。里程無調表、保養紀錄清清楚楚，透明的歷史，才是安心的保證。</p>
-    </div>
+ <div class="slide-card">
+ <div class="tag-pink">寶輩嚴選守則 02</div>
+ <h2 class="step-title">第三方認證與保修履歷</h2>
+ 
+ <div class="compare-row">
+ <img src="babay-goo-certification-check.jpg" alt="寶輩中古車全面通過 Goo 第三方鑑定安全憑證" class="img-fluid" style="margin-bottom:0; width: 48%;">
+ <img src="babay-save-warranty-certificate.jpg" alt="SAVE 保修聯盟車輛保固書" class="img-fluid" style="margin-bottom:0; width: 48%;">
+ </div>
+ 
+ <p class="desc" style="margin-top:20px;">自己的車況自己說了不算！寶輩全車系導入 <strong>Goo / SAVE 第三方公正單位鑑定</strong>，並提供完善的車輛保固書。里程無調表、保養紀錄清清楚楚，透明的歷史，才是安心的保證。</p>
+ </div>
 
-    <div class="slide-card">
-      <div class="tag-pink">寶輩嚴選守則 03</div>
-      <h2 class="step-title">認準高評價誠信車商</h2>
-      
-      <img src="babay-transparent-contract-signing.jpg" alt="寶輩汽車顧問與客戶一對一透明解說合約細節" class="img-fluid">
-      
-      <p class="desc">購車不是一錘子買賣。在寶輩，我們堅持「車況一對一透明解說」，合約細節絕不含糊。我們不只賣車，更致力於成為您一輩子最可靠的汽車顧問。</p>
-    </div>
+ <div class="slide-card">
+ <div class="tag-pink">寶輩嚴選守則 03</div>
+ <h2 class="step-title">認準高評價誠信車商</h2>
+ 
+ <img src="babay-transparent-contract-signing.jpg" alt="寶輩汽車顧問與客戶一對一透明解說合約細節" class="img-fluid">
+ 
+ <p class="desc">購車不是一錘子買賣。在寶輩，我們堅持「車況一對一透明解說」，合約細節絕不含糊。我們不只賣車，更致力於成為您一輩子最可靠的汽車顧問。</p>
+ </div>
 
-    <div class="slide-card">
-      <h2 class="step-title" style="color: var(--accent-yellow);">買車避坑 3 步驟總結</h2>
-      <ul class="check-list">
-        <li>拒絕低價誘惑，確認全車原鈑件，骨架無重大修復</li>
-        <li>核對第三方鑑定書與真實里程履歷</li>
-        <li>選擇實體評價優良的寶輩國際貿易</li>
-      </ul>
-      <p class="desc" style="margin-top: 20px; font-size: 15px; opacity: 0.9; color: var(--accent-yellow);">💡 建議長按螢幕截圖保存，買車時隨時拿出來核對！</p>
-    </div>
+ <div class="slide-card">
+ <div class="tag-pink">收藏這張圖</div>
+ <h2 class="step-title" style="color: var(--accent-yellow);">買車避坑 3 步驟總結</h2>
+ <ul class="check-list">
+ <li>拒絕低價誘惑，確認全車原鈑件，骨架無重大修復</li>
+ <li>核對第三方鑑定書與真實里程履歷</li>
+ <li>選擇實體評價優良的寶輩國際貿易</li>
+ </ul>
+ <p class="desc" style="margin-top: 20px; font-size: 15px; opacity: 0.9; color: var(--accent-yellow);">💡 建議長按螢幕截圖保存，買車時隨時拿出來核對！</p>
+ </div>
 
-    <div class="slide-card" style="text-align: center; border: 2px solid var(--accent-yellow);">
-      
-      <img src="babay-happy-customer-delivery.jpg" alt="寶輩國際中古車開心交車實況，成為您一輩子的汽車顧問" class="img-fluid" style="border: 2px solid var(--accent-yellow);">
+ <div class="slide-card" style="text-align: center; border: 2px solid var(--accent-yellow);">
+ 
+ <img src="babay-happy-customer-delivery.jpg" alt="寶輩國際中古車開心交車實況，成為您一輩子的汽車顧問" class="img-fluid" style="border: 2px solid var(--accent-yellow);">
 
-      <h2 style="margin-top: 0;">準備好開著您的寶貝愛車回家了嗎？</h2>
-      <p class="desc">點擊下方按鈕，由寶輩專家為您一對一車況諮詢，並領取《2026 全台避坑買車清單》完整高畫質 PDF 版！</p>
-      
-      <div class="coupon-box">
-        <h3>🎁 您的專屬優惠碼</h3>
-        <div class="coupon-code" id="display-coupon">讀取中...</div>
-        <div class="coupon-hint">⚠ 請截圖本頁，或點擊下方按鈕將序號傳至 LINE，憑碼享「購車金一萬元」！</div>
-      </div>
-    </div>
+ <h2 style="margin-top: 0;">準備好開著您的寶貝愛車回家了嗎？</h2>
+ <p class="desc">點擊下方按鈕，由寶輩專家為您一對一車況諮詢，並領取《2026 全台避坑買車清單》完整高畫質 PDF 版！</p>
+ 
+ <div class="coupon-box">
+ <h3>🎁 您的專屬優惠碼</h3>
+ <div class="coupon-code" id="display-coupon">讀取中...</div>
+ <div class="coupon-hint">⚠ 請截圖本頁，或點擊下方按鈕將序號傳至 LINE，憑碼享「購車金一萬元」！</div>
+ </div>
+ </div>
 
-  </div>
+ </div>
 
-  <div class="sticky-cta">
-    <a href="#" id="line-cta-btn" target="_blank" onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'line_cta_click', 'page_source': document.title});">
-      您一輩子的汽車顧問諮詢
-    </a>
-  </div>
+ <div class="sticky-cta">
+ <a href="#" id="line-cta-btn" target="_blank" onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'line_cta_click', 'page_source': document.title});">
+ 您一輩子的汽車顧問諮詢
+ </a>
+ </div>
 
-  <script>
-    function changeTheme() {
-      const selectedTheme = document.getElementById('themeSelect').value;
-      const body = document.body;
-      if (selectedTheme === 'official') {
-        body.setAttribute('data-theme', 'official');
-      } else {
-        body.setAttribute('data-theme', selectedTheme);
-      }
-    }
+ <script>
+ function changeTheme() {
+ const selectedTheme = document.getElementById('themeSelect').value;
+ const body = document.body;
+ if (selectedTheme === 'official') {
+ body.setAttribute('data-theme', 'official');
+ } else {
+ body.setAttribute('data-theme', selectedTheme);
+ }
+ }
 
-    function generateCoupon() {
-      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-      let code = 'BB-'; 
-      for(let i=0; i<6; i++) {
-        code += chars.charAt(Math.floor(Math.random() * chars.length));
-      }
-      return code;
-    }
+ function generateCoupon() {
+ const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+ let code = 'BB-'; 
+ for(let i=0; i<6; i++) {
+ code += chars.charAt(Math.floor(Math.random() * chars.length));
+ }
+ return code;
+ }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const couponCode = generateCoupon();
-      document.getElementById('display-coupon').innerText = couponCode;
+ document.addEventListener("DOMContentLoaded", () => {
+ const couponCode = generateCoupon();
+ document.getElementById('display-coupon').innerText = couponCode;
 
-      const pageTitle = document.title || "未命名著陸頁";
-      const message = `你好，我想預約寶輩汽車顧問諮詢！\n\n📌 來源：${pageTitle}\n🎁 我的專屬購車金一萬元：${couponCode}\n📄 我想索取買車避坑攻略PDF！`;
-      
-      const encodedMessage = encodeURIComponent(message);
-      const lineLink = `https://line.me/R/oaMessage/@535cdwhx/?${encodedMessage}`;
-      document.getElementById('line-cta-btn').href = lineLink;
-    });
-  </script>
+ const pageTitle = document.title || "2026全台避坑買車清單著陸頁";
+ const message = `你好，我想預約寶輩汽車顧問諮詢！\n\n📌 來源：${pageTitle}\n🎁 我的專屬購車金一萬元：${couponCode}\n📄 我想索取買車避坑攻略PDF！`;
+ 
+ const encodedMessage = encodeURIComponent(message);
+ const lineLink = `https://line.me/R/oaMessage/@535cdwhx/?${encodedMessage}`;
+ document.getElementById('line-cta-btn').href = lineLink;
+ });
+ </script>
 </body>
 </html>
